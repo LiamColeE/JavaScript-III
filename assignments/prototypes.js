@@ -132,7 +132,11 @@ Humanoid.prototype.greet = function(){
   console.log(mage.takeDamage()); // Bruce took damage.
   console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
 
-
+  function sayName(name) {
+    console.log(this);
+    return name;
+  }
+  sayName("D'Artagnan");
   // Stretch task: 
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
