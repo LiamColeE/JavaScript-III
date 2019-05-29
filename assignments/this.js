@@ -60,16 +60,14 @@ apple.destroy();
 potato.destroy();
 
 
-
-
+function CharacterStats(characterStats){  
 // Principle 4
 
 // code example for Explicit Binding
-function CharacterStats(characterStats){
     GameObject.call(this,characterStats);
     this.healthPoints = characterStats.healthPoints;
-  }
-  CharacterStats.prototype = Object.create(GameObject.prototype);
-  CharacterStats.prototype.takeDamage = function(){
+}
+CharacterStats.prototype = Object.create(GameObject.prototype);
+CharacterStats.prototype.takeDamage = function(){
     return `${this.name} took damage`
-  }
+}
